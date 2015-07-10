@@ -30,7 +30,7 @@ import java.util.Properties;
 public final class OptionsSupport {
 
     /** Value for an unavailable property. */
-    protected static final String UNAVAILABLE = "n/a";
+    private static final String UNAVAILABLE = "n/a";
 
     /**
      * Updates the URL with the appropriate attributes if legacy properties are
@@ -76,7 +76,7 @@ public final class OptionsSupport {
                 result = addUrlOption(result, "w", "1");
             }
             else if ("journaled".equals(writeConcernType)) {
-                result = addUrlOption(result, "journal", "true");
+                result = addUrlOption(result, "j", "true");
             }
             else if ("replica_acknowledged".equals(writeConcernType)) {
                 result = addUrlOption(result, "w", "2");
